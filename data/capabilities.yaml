@@ -182,15 +182,4 @@ agents:
       - scikit_learn
 
   rust-backend:
-    can_do:
-      - systems_programming
-      - high_performance_computing
-      - memory_safe_implementation
-      - async_runtime_design
-    cannot_do:
-      - garbage_collected_optimization
-      - frontend_development
-    tools_required:
-      - rustc
-      - cargo
       - clippy

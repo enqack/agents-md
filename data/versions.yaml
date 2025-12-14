@@ -108,3 +108,12 @@ agents:
         date: 2025-12-14
         changes: "Initial creation from backend-developer template"
         template_version: backend-developer@1.0
+
+  knowledge-architect:
+    current_version: 1.0.0
+    versions:
+      - version: 1.0.0
+        date: 2025-12-14
+        changes: "Initial creation from backend-developer template"
+        template_version: backend-developer@1.0
+```

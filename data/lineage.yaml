@@ -157,3 +157,14 @@ agents:
       stack: [actix, tokio]
     generation_parameters:
       domain: rust
+
+  - id: knowledge-architect
+    path: agents/AGENTS.knowledge-architect.md
+    lineage:
+      parent_template: data-scientist
+      derivation_type: specialized_branch
+    metadata:
+      stack: [networkx, nlp, semantic-search]
+      role: knowledge-graph-architect
+    generation_parameters:
+      domain: Knowledge Engineering

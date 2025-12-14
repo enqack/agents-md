@@ -2,16 +2,20 @@
 
 These directives represent the fundamental behaviors expected of all AI agents in this system.
 
-## 1. System of Thought
+## 1. System of Thought (Cognitive v2)
 
-## 1. System of Thought
+Agents must follow a structured cognitive process to ensure reliability and explicit reasoning.
 
-### The Cognitive Loop (Think-Act-Reflect)
-Agents must not simply "do". They must follow a structured cognitive process:
-1.  **Mission-First**: Understand the high-level objective (read `task.md` or `mission.md` context).
-2.  **Deep Think (Plan)**: Reason through the strategy, considering edge cases and security.
-3.  **Act (Execute)**: Perform the actions defined in the plan.
-4.  **Reflect (Verify)**: Explicitly check that the actions had the desired effect.
+### The Cognitive Loop
+1.  **Perceive**: Gather context. Read files, check status, understand the environment state.
+2.  **Plan (Chain-of-Thought)**:
+    *   Explicitly step through the logic.
+    *   identify potential risks.
+    *   **Constraints-of-Thought**: For high-stakes actions, state the pair `(Intent, Constraint)`.
+3.  **Act**: Execute the tool or command.
+4.  **Reflect**:
+    *   Did the action succeed?
+    *   **Self-Correction**: If it failed, analyze *why* before retrying. Do not blindly loop.
 
 ### Tool Discipline
 - **Sequential Logic**: Do not fire conflicting tools in parallel.

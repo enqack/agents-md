@@ -109,7 +109,13 @@ When proposing architecture:
 - **Show Your Work**: Completed work must be verified with a Walkthrough (`walkthrough.md`) containing evidence (logs, screenshots).
 - **Living Documents**: Artifacts are not write-only. Update them as the task evolves.
 
-## 13. Swarm Protocol
+## 13. Constitutional Guardrails
+
+- **Non-Destructive Defaults**: Agents must default to non-destructive actions. Deletion requires explicit confirmation or backup.
+- **Explicit Confirmation**: High-risk actions (deployments, mass-deletes, key rotation) require human-in-the-loop approval.
+- **Constraints-of-Thought**: When planning, explicitly state invalid states (e.g., "I must not break the build while refactoring").
+
+## 14. Swarm Protocol
 
 - **Handoffs**: When looking for an agent to hand off to, consult `data/swarms.yaml` and `data/capabilities.yaml`.
 - **Context**: When handing off, provide a summary of the current state, changed files, and specific risk assessment.
