@@ -27,6 +27,26 @@ templates:
     description: Swarm Router/Orchestrator
     category: management
 
+  - id: security-auditor
+    path: templates/software-development/security-auditor.md
+    description: Generic Security Auditor
+    category: software-development
+
+  - id: test-engineer
+    path: templates/software-development/test-engineer.md
+    description: Generic Test Engineer
+    category: software-development
+
+  - id: api-designer
+    path: templates/software-development/api-designer.md
+    description: Generic API Designer
+    category: software-development
+
+  - id: data-scientist
+    path: templates/software-development/data-scientist.md
+    description: Generic Data Scientist
+    category: software-development
+
 agents:
   - id: golang-techwriter
     path: agents/AGENTS.golang-techwriter.md
@@ -36,6 +56,8 @@ agents:
     metadata:
       domain: golang
       capabilities: [documentation, technical-writing]
+    generation_parameters:
+      domain: golang
 
   - id: python-backend
     path: agents/AGENTS.python-backend.md
@@ -83,3 +105,55 @@ agents:
       cloud: gcp
       framework: foundation-fabric-fast
       cognitive_architecture: true
+
+  - id: red-team
+    path: agents/AGENTS.red-team.md
+    lineage:
+      parent_template: security-auditor
+      derivation_type: specialization
+    metadata:
+      focus: offensive-security
+    generation_parameters:
+      domain: security
+
+  - id: qa-architect
+    path: agents/AGENTS.qa-architect.md
+    lineage:
+      parent_template: test-engineer
+      derivation_type: specialization
+    metadata:
+      frameworks: [playwright, k6]
+    generation_parameters:
+      domain: testing
+
+  - id: api-governance
+    path: agents/AGENTS.api-governance.md
+    lineage:
+      parent_template: api-designer
+      derivation_type: specialization
+    metadata:
+      standards: [openapi, swagger]
+    generation_parameters:
+      domain: api-standards
+
+  - id: data-scientist
+    path: agents/AGENTS.data-scientist.md
+    lineage:
+      parent_template: data-scientist
+      derivation_type: implementation
+    metadata:
+      stack: [pandas, jupyter]
+      cognitive_architecture: true
+    generation_parameters:
+      domain: analytics
+
+  - id: rust-backend
+    path: agents/AGENTS.rust-backend.md
+    lineage:
+      parent_template: backend-developer
+      derivation_type: specialization
+    metadata:
+      language: rust
+      stack: [actix, tokio]
+    generation_parameters:
+      domain: rust

@@ -46,6 +46,28 @@ swarms:
       - multi_cloud_strategy
       - disaster_recovery_setup
 
+  - name: secure-deployment-swarm
+    description: DevSecOps team for hardened releases
+    agents:
+      - red-team
+      - aws-devops
+    orchestrator: orchestrator-agent
+    use_cases:
+      - penetration_testing
+      - security_audit
+      - hardened_infrastructure
+
+  - name: data-analytics-swarm
+    description: Data science and engineering team
+    agents:
+      - data-scientist
+      - python-backend
+    orchestrator: orchestrator-agent
+    use_cases:
+      - data_pipeline_creation
+      - ml_model_deployment
+      - analytics_dashboard
+
 compatibility_matrix:
   # Compatible pairs (work well together)
   compatible:
@@ -55,6 +77,9 @@ compatibility_matrix:
     - [gcp-engineer, gcp-fast-engineer]
     - [golang-techwriter, python-backend]
     - [golang-techwriter, react-frontend]
+    - [red-team, aws-devops]
+    - [qa-architect, react-frontend]
+    - [data-scientist, python-backend]
   
   # Conflicting pairs (overlapping responsibilities, choose one)
   conflicting:

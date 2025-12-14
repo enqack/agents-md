@@ -121,3 +121,76 @@ agents:
       - foundation_fabric_fast
       - terraform
       - enterprise_architecture
+
+  red-team:
+    can_do:
+      - penetration_testing
+      - vulnerability_scanning
+      - security_audit
+      - exploit_simulation
+    cannot_do:
+      - infrastructure_provisioning
+      - application_development
+    tools_required:
+      - owasp_zap
+      - bandit
+      - gosec
+      - trivy
+
+  qa-architect:
+    can_do:
+      - e2e_testing
+      - performance_testing
+      - test_automation_frameworks
+      - load_testing
+    cannot_do:
+      - production_code
+      - infrastructure_provisioning
+    tools_required:
+      - playwright
+      - selenium
+      - k6
+      - pytest
+
+  api-governance:
+    can_do:
+      - api_design
+      - openapi_specification
+      - api_linting
+      - versioning_strategy
+    cannot_do:
+      - endpoint_implementation
+      - database_design
+    tools_required:
+      - swagger_editor
+      - spectral
+      - postman
+
+  data-scientist:
+    can_do:
+      - data_analysis
+      - data_visualization
+      - ml_model_training
+      - statistical_analysis
+    cannot_do:
+      - production_api_deployment
+      - frontend_development
+    tools_required:
+      - jupyter
+      - pandas
+      - matplotlib
+      - scikit_learn
+
+  rust-backend:
+    can_do:
+      - systems_programming
+      - high_performance_computing
+      - memory_safe_implementation
+      - async_runtime_design
+    cannot_do:
+      - garbage_collected_optimization
+      - frontend_development
+    tools_required:
+      - rustc
+      - cargo
+      - clippy

@@ -63,19 +63,12 @@ A comprehensive, metadata-driven system for creating, managing, and orchestratin
 nix develop
 ```
 
-This provides:
+This provides a pre-configured shell with:
 - Python 3.11
-- pip, virtualenv
-- Invoke (task runner)
+- All dependencies (`invoke`, `pyyaml`, `rich`, `jinja2`)
+- No virtual environment needed!
 
-### 2. Initial Setup
-```bash
-invoke setup
-```
-
-Creates a virtual environment and installs dependencies (PyYAML).
-
-### 3. Validate the System
+### 2. Validate the System
 ```bash
 invoke validate
 ```
@@ -183,17 +176,17 @@ The `knowledge/` directory contains foundational guidelines that inform all agen
 ### Available Tasks
 ```bash
 invoke --list              # Show all tasks
-invoke setup               # Create venv and install deps
 invoke validate            # Validate all YAML files
-invoke clean               # Remove venv and caches
+invoke stats               # Show repository statistics
+invoke build-docs          # Generate HTML documentation
+invoke clean               # Remove build artifacts
 invoke create-agent        # Create agent from template
+invoke regenerate          # Regenerate agent from template
 invoke update-version      # Update version history
 ```
 
 ### Reproducibility
-All dependencies are pinned via:
-- **Nix**: System-level tools (`flake.lock`)
-- **Python**: Application dependencies (`requirements.txt`)
+All dependencies are pinned via **Nix** (`flake.lock`).
 
 ---
 

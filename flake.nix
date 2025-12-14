@@ -15,9 +15,10 @@
       {
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
-            python
-            python311Packages.pip
-            python311Packages.virtualenv
+            python311
+            python311Packages.pyyaml
+            python311Packages.rich
+            python311Packages.jinja2
             python311Packages.invoke
           ];
 
@@ -25,19 +26,12 @@
             echo "🛸 Agent Knowledge System - Development Environment"
             echo ""
             echo "Available commands:"
-            echo "  invoke setup     - Create venv and install dependencies"
-            echo "  invoke validate  - Validate all data YAML files"
-            echo "  invoke clean     - Remove venv and caches"
-            echo "  invoke --list    - List all available tasks"
+            echo "  invoke validate     - Validate all data YAML files"
+            echo "  invoke stats        - Show repository statistics"
+            echo "  invoke build-docs   - Generate HTML documentation"
+            echo "  invoke --list       - List all available tasks"
             echo ""
-            
-            # Activate venv if it exists
-            if [ -d .venv ]; then
-              source .venv/bin/activate
-              echo "✅ Virtual environment activated (.venv)"
-            else
-              echo "⚠️  Run 'invoke setup' to create virtual environment"
-            fi
+            echo "✅ All dependencies provided by Nix"
           '';
         };
       }

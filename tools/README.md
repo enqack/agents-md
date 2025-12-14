@@ -68,26 +68,23 @@ python tools/update_version.py python-backend 1.2.0 "Added async support"
 
 ## Dependencies
 
-All scripts require Python 3.6+ and PyYAML:
-```bash
-pip install pyyaml
-```
+All dependencies are provided by the Nix development environment (`flake.nix`). You do not need to install anything manually.
 
 ## Workflow
 
 ### Creating a New Agent
-1. Run `create_agent.py` to generate the file
+1. Run `invoke create-agent` (or `python tools/create_agent.py`) to generate the file
 2. Edit the agent file to customize
 3. Manually add entries to:
    - `data/lineage.yaml`
    - `data/capabilities.yaml`
-4. Run `update_version.py` to create v1.0.0
-5. Run `validate_data.py` to ensure consistency
+4. Run `invoke update-version` to create v1.0.0
+5. Run `invoke validate` to ensure consistency
 
 ### Updating an Existing Agent
 1. Edit the agent markdown file
-2. Run `update_version.py` to record the change
-3. Run `validate_data.py` to verify
+2. Run `invoke update-version` to record the change
+3. Run `invoke validate` to verify
 
 ---
 

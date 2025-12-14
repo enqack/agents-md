@@ -68,3 +68,43 @@ agents:
         date: 2025-12-14
         changes: "Added Cognitive Architecture and Artifact Protocol sections"
         template_version: devops-engineer@1.1
+
+  red-team:
+    current_version: 1.0.0
+    versions:
+      - version: 1.0.0
+        date: 2025-12-14
+        changes: "Initial creation from security-auditor template"
+        template_version: security-auditor@1.0
+
+  qa-architect:
+    current_version: 1.0.0
+    versions:
+      - version: 1.0.0
+        date: 2025-12-14
+        changes: "Initial creation from test-engineer template"
+        template_version: test-engineer@1.0
+
+  api-governance:
+    current_version: 1.0.0
+    versions:
+      - version: 1.0.0
+        date: 2025-12-14
+        changes: "Initial creation from api-designer template"
+        template_version: api-designer@1.0
+
+  data-scientist:
+    current_version: 1.0.0
+    versions:
+      - version: 1.0.0
+        date: 2025-12-14
+        changes: "Initial creation from data-scientist template"
+        template_version: data-scientist@1.0
+
+  rust-backend:
+    current_version: 1.0.0
+    versions:
+      - version: 1.0.0
+        date: 2025-12-14
+        changes: "Initial creation from backend-developer template"
+        template_version: backend-developer@1.0
