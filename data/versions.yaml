@@ -1,0 +1,70 @@
+format_version: 1.0
+
+agents:
+  golang-techwriter:
+    current_version: 1.0.0
+    versions:
+      - version: 1.0.0
+        date: 2025-12-14
+        changes: "Initial creation from tech-writer template, specialized for Golang"
+        template_version: tech-writer@1.0
+
+  python-backend:
+    current_version: 1.1.0
+    versions:
+      - version: 1.0.0
+        date: 2025-12-14
+        changes: "Initial creation from backend-developer template"
+        template_version: backend-developer@1.0
+      - version: 1.1.0
+        date: 2025-12-14
+        changes: "Added Cognitive Architecture and Artifact Protocol sections"
+        template_version: backend-developer@1.1
+
+  react-frontend:
+    current_version: 1.1.0
+    versions:
+      - version: 1.0.0
+        date: 2025-12-14
+        changes: "Initial creation from frontend-developer template"
+        template_version: frontend-developer@1.0
+      - version: 1.1.0
+        date: 2025-12-14
+        changes: "Added Cognitive Architecture and Artifact Protocol sections"
+        template_version: frontend-developer@1.1
+
+  aws-devops:
+    current_version: 1.1.0
+    versions:
+      - version: 1.0.0
+        date: 2025-12-14
+        changes: "Initial creation from devops-engineer template, specialized for AWS"
+        template_version: devops-engineer@1.0
+      - version: 1.1.0
+        date: 2025-12-14
+        changes: "Added Cognitive Architecture and Artifact Protocol sections"
+        template_version: devops-engineer@1.1
+
+  gcp-engineer:
+    current_version: 1.0.0
+    versions:
+      - version: 1.0.0
+        date: 2025-12-14
+        changes: "Initial creation from devops-engineer template, specialized for GCP"
+        template_version: devops-engineer@1.0
+
+  gcp-fast-engineer:
+    current_version: 1.2.0
+    versions:
+      - version: 1.0.0
+        date: 2025-12-14
+        changes: "Initial creation from devops-engineer template, specialized for GCP FAST"
+        template_version: devops-engineer@1.0
+      - version: 1.1.0
+        date: 2025-12-14
+        changes: "Updated stage names (0-org-setup, 1-vpcsc, 2-project-factory)"
+        template_version: devops-engineer@1.0
+      - version: 1.2.0
+        date: 2025-12-14
+        changes: "Added Cognitive Architecture and Artifact Protocol sections"
+        template_version: devops-engineer@1.1

@@ -1,0 +1,62 @@
+format_version: 1.0
+
+swarms:
+  - name: full-stack-web-team
+    description: Complete web application development team
+    agents:
+      - python-backend
+      - react-frontend
+      - aws-devops
+    orchestrator: orchestrator-agent
+    use_cases:
+      - web_application_development
+      - saas_product_development
+      - api_driven_applications
+    
+  - name: gcp-enterprise-deployment
+    description: Google Cloud Platform enterprise landing zone team
+    agents:
+      - gcp-fast-engineer
+      - gcp-engineer
+    orchestrator: orchestrator-agent
+    use_cases:
+      - gcp_foundation_setup
+      - organization_wide_infrastructure
+      - multi_project_deployment
+
+  - name: documentation-squad
+    description: Technical documentation generation team
+    agents:
+      - golang-techwriter
+      - python-backend  # For code examples
+    orchestrator: orchestrator-agent
+    use_cases:
+      - api_documentation
+      - developer_guides
+      - reference_documentation
+
+  - name: cloud-migration-team
+    description: Multi-cloud infrastructure team
+    agents:
+      - aws-devops
+      - gcp-engineer
+    orchestrator: orchestrator-agent
+    use_cases:
+      - cloud_migration
+      - multi_cloud_strategy
+      - disaster_recovery_setup
+
+compatibility_matrix:
+  # Compatible pairs (work well together)
+  compatible:
+    - [python-backend, react-frontend]
+    - [python-backend, aws-devops]
+    - [react-frontend, aws-devops]
+    - [gcp-engineer, gcp-fast-engineer]
+    - [golang-techwriter, python-backend]
+    - [golang-techwriter, react-frontend]
+  
+  # Conflicting pairs (overlapping responsibilities, choose one)
+  conflicting:
+    - [aws-devops, gcp-engineer]  # Different cloud providers
+    - [aws-devops, gcp-fast-engineer]  # Different cloud providers

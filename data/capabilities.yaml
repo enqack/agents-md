@@ -1,0 +1,123 @@
+format_version: 1.0
+
+agents:
+  golang-techwriter:
+    can_do:
+      - technical_documentation
+      - api_documentation
+      - godoc_generation
+      - markdown_authoring
+      - code_examples
+    cannot_do:
+      - code_implementation
+      - infrastructure_design
+      - ui_design
+    tools_required:
+      - go
+      - godoc
+    domain_expertise:
+      - golang
+      - documentation_standards
+
+  python-backend:
+    can_do:
+      - api_design
+      - database_queries
+      - async_io
+      - rest_api_implementation
+      - orm_usage
+      - unit_testing
+    cannot_do:
+      - ui_design
+      - infrastructure_provisioning
+      - frontend_development
+    tools_required:
+      - python
+      - pytest
+      - ruff
+    domain_expertise:
+      - python
+      - fastapi
+      - django
+      - sqlalchemy
+
+  react-frontend:
+    can_do:
+      - ui_design
+      - component_architecture
+      - state_management
+      - responsive_design
+      - accessibility_implementation
+    cannot_do:
+      - backend_api_implementation
+      - database_design
+      - infrastructure_provisioning
+    tools_required:
+      - node
+      - npm
+      - vite
+      - vitest
+    domain_expertise:
+      - react
+      - typescript
+      - tailwind_css
+
+  aws-devops:
+    can_do:
+      - infrastructure_provisioning
+      - ci_cd_pipelines
+      - container_orchestration
+      - monitoring_setup
+      - iac_implementation
+    cannot_do:
+      - application_code
+      - ui_design
+      - database_query_optimization
+    tools_required:
+      - terraform
+      - aws_cli
+      - docker
+      - kubectl
+    domain_expertise:
+      - aws
+      - terraform
+      - kubernetes
+
+  gcp-engineer:
+    can_do:
+      - infrastructure_provisioning
+      - gcp_service_configuration
+      - iac_implementation
+      - cloud_native_architecture
+    cannot_do:
+      - application_code
+      - ui_design
+    tools_required:
+      - terraform
+      - gcloud
+      - docker
+    domain_expertise:
+      - gcp
+      - terraform
+      - cloud_run
+      - gke
+
+  gcp-fast-engineer:
+    can_do:
+      - landing_zone_deployment
+      - organization_policy_management
+      - vpc_service_controls
+      - hierarchical_firewall_policies
+      - project_factory_operation
+    cannot_do:
+      - application_code
+      - ui_design
+      - non_gcp_infrastructure
+    tools_required:
+      - terraform
+      - gcloud
+    domain_expertise:
+      - gcp
+      - foundation_fabric_fast
+      - terraform
+      - enterprise_architecture

@@ -1,0 +1,85 @@
+format_version: 1.0
+last_updated: 2025-12-14
+
+templates:
+  - id: tech-writer
+    path: templates/tech-writer.md
+    description: Generic Technical Writer persona
+    category: documentation
+
+  - id: backend-developer
+    path: templates/software-development/backend-developer.md
+    description: Generic Backend Developer
+    category: software-development
+
+  - id: frontend-developer
+    path: templates/software-development/frontend-developer.md
+    description: Generic Frontend Developer
+    category: software-development
+
+  - id: devops-engineer
+    path: templates/software-development/devops-engineer.md
+    description: Generic DevOps Engineer
+    category: software-development
+
+  - id: orchestrator-agent
+    path: templates/software-development/orchestrator-agent.md
+    description: Swarm Router/Orchestrator
+    category: management
+
+agents:
+  - id: golang-techwriter
+    path: agents/AGENTS.golang-techwriter.md
+    lineage:
+      parent_template: tech-writer
+      derivation_type: specialization
+    metadata:
+      domain: golang
+      capabilities: [documentation, technical-writing]
+
+  - id: python-backend
+    path: agents/AGENTS.python-backend.md
+    lineage:
+      parent_template: backend-developer
+      derivation_type: implementation
+    metadata:
+      stack: [python, fastapi, sqlalchemy]
+      cognitive_architecture: true
+
+  - id: react-frontend
+    path: agents/AGENTS.react-frontend.md
+    lineage:
+      parent_template: frontend-developer
+      derivation_type: implementation
+    metadata:
+      stack: [react, typescript, tailwind]
+      cognitive_architecture: true
+
+  - id: aws-devops
+    path: agents/AGENTS.aws-devops.md
+    lineage:
+      parent_template: devops-engineer
+      derivation_type: implementation
+    metadata:
+      cloud: aws
+      stack: [terraform, eks]
+      cognitive_architecture: true
+
+  - id: gcp-engineer
+    path: agents/AGENTS.gcp-engineer.md
+    lineage:
+      parent_template: devops-engineer
+      derivation_type: implementation
+    metadata:
+      cloud: gcp
+      stack: [terraform, gke]
+
+  - id: gcp-fast-engineer
+    path: agents/AGENTS.gcp-fast-engineer.md
+    lineage:
+      parent_template: devops-engineer
+      derivation_type: specialized_branch
+    metadata:
+      cloud: gcp
+      framework: foundation-fabric-fast
+      cognitive_architecture: true
